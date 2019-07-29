@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Loose-leaf Insert of the Internet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> 
+<link href="index.css" rel="stylesheet"></head>
+<body id='body'>
+  <img id='sunProjects' class='sunMenu'>
+  <img id='sunTech' class='sunMenu'>
+  <img id='sunResume' class='sunMenu'>
+  <img id='sunBio' class='sunMenu'>  
+  <div class='mainContainer' id='mainContainer'>
+      <div id='techPage' class='row clipMe mainPage'></div>
+      <div id='projectsPage' class='mainPage clipMe'></div>
+      <div id='resumePage' class='mainPage clipMe'></div>
+      <div id='bioPage' class='mainPage clipMe'></div>
+
+      <!--Modals-->
+      <div class="modal" tabindex="-1" role="dialog" id='chatbotModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">ChatBots</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/chatbot.PNG?alt=media&token=a6d815b0-1333-4b91-aa09-ad0585267b0a' class='modalImg'>
+              <p class='modalPar'>Modal body text goes here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='emojiModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Emoji Commands</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/emoji.PNG?alt=media&token=05692017-3498-41ec-b485-bd5498702b46' class='modalImg'>
+              <p class='modalPar'>The emoji commmands feature uses a stock of emoji command/emoji value pairs stored in a JSON file.  When the page loads an XHR request is made for the JSON and then the emojis and their commands(collected from the JSON keys) are stored to arrays.  
+                  When a message is submitted, it is first split into seperate words, each word is then checked vs each emoji command and if there is a match, it is replaced with the corresponding emoji via a splice method.  Finally, all the words and emojis are joined back together before storage in the messages array.
+                  Additionally, the emoji and emoji key arrays are looped over to build up a reference modal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='gifModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Gif Selector</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/gif.PNG?alt=media&token=846ad4e9-329f-4d81-97b0-a4faf2fb674e' class='modalImg'>
+              <p class='modalPar'>The gif selector component utilizes the Giphy API to get a list of gifs that may be inserted into messages.  An XHR request is made to the Giphy API, modifying the URL of the get request based off the input search term and limited by selected number of results.
+                  The returned array of gifs is then looped over to build out a list of gif thumbnails the user can choose between.  If a gif is selected, it is stored into a variable and will be appended to the message upon submital. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='friendModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Friends List</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/friend.PNG?alt=media&token=e4e3f136-741d-47e1-8b86-df26831de480' class='modalImg'>
+              <p class='modalPar'>The friends component primarily makes use of a firebase database of users and friend requests.  Each user has a user key within the database including their google UID, their username, and their list of friends(by UID), and their avatar.
+                  The friends component uses a series of promises and axios calls to get the user objects for each friend from the current users friend list, and then build out a list of friends usernames and avatars to display to the user.  
+                  The add friends page again uses a series of promises and axios calls to the database to get a list of users, and then do a series of filters on users who are already friends, have pending requests, or are the current user. 
+                  Pending friend requests are stored in the database in the requests database, created by an axios post with the UIDs of both parties.  When a request is accepted or declined, two series of axios calls are made to delete the request, and then add the approriate user to each party's friends list through an axios put request.
+                  The page is refreshed after each action. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='avatarModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Avatars</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/avatar.PNG?alt=media&token=70419c81-abb7-4e73-9663-fded298d5938' class='modalImg'>
+              <p class='modalPar'>The avatars component allows users to upload and select avatars for display with their usernames.  Avatars are stored using firebase storage, and new avatar images may be uploaded to the storage database by users.  This is done using the javascript file interface and a put request.
+                  Because the firebase storage system does not allow for getting download links for files programatically, each avatar has a filepath reference object created in the main database.  This reference is then used to access the actual link URL using firebase's getURL function.  The avatar list that users may select from is built by using an array of promises with each index getting a seperate download URL and resolved through a Promise.all.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='messageModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Message List</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/message.PNG?alt=media&token=b45f6580-7974-4898-af9c-8e79b498802e' class='modalImg'>
+              <p class='modalPar'>The messages system uses an XHR get request to collect an initial set of messages upon page load from a JSON file (served up locally by a JSON server).  These messages are then stored into a messages array which will be used for all further message manipulation.
+                  When a new message is submitted, its relevant data is collected (message value, timestamp, user, gifs), bundled into a message object and then pushed into the messages array.  A function is then called to build out the messages list by looping through the main array.
+                  A state variable used for editing is assigned the id of the relevant message upon beginning editing of a message.  Upon submitting an edited message the array is looped over again, checking for the relevant id and updating the values of the correct array index.  The editing state is then turned back off.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='solarModal'>
+        <div class="modal-dialog solarContent" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">My work in the solar industry</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class='solarType' id='solarConst'>
+                <p class='solarWorkTitle'>Construction Management</p>
+                <div class='solarWorkDiv'>
+                <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/FullSizeRender%20(12).jpg?alt=media&token=a70bc45f-1286-44a8-9e65-5b14e4f32d1f' class='solarModalImg'/>
+                <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/IMG_0481.JPG?alt=media&token=99135649-8f78-479b-a486-6f42f37d216a' class='solarModalImg'/>
+                <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/IMG_0188.JPG?alt=media&token=c64fe32d-b727-4f73-bf10-b89213e7c214' class='solarModalImg'/>
+                </div>
+              </div>
+              <div class='solarWorkDiv'>
+              <div class='solarType'>
+              <p class='solarWorkTitle'>Project Management</p>
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/schedule.PNG?alt=media&token=54304d2e-08b3-4b45-850d-66adf5331fda' class='solarModalImg'/>
+            </div>
+            <div class='solarType'>
+              <p class='solarWorkTitle'>Electrical Engineering</p>
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/sld.PNG?alt=media&token=28f632da-ea14-4eae-90f0-932bb078cb52' class='solarModalImg'/>
+            </div>
+            <div class='solarType'>
+              <p class='solarWorkTitle'>Engineering Management</p>
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/layout.PNG?alt=media&token=83380a69-ac8d-4ca8-a3c0-67cab4f0e464' class='solarModalImg'/>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--End Modals-->
+
+      <footer class="page-footer">
+        <p class='footPar'>Contact</p>
+        <div class='footDiv'>
+          <p class='footerLink'><i class="fas fa-envelope-square"></i> Rich.FisherNC@gmail.com</p>
+          <a href='https://github.com/Rfishernc' target ='_blank' class='footerLink'><i class="fab fa-github"></i> GitHub</a>
+          <p class='footerLink footerRight'><i class="fas fa-phone"></i> 615-543-1664</p>
+        </div>
+      </footer>
+  </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
