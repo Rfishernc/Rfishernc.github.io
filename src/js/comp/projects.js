@@ -31,6 +31,7 @@ const clickedCard = () => {
 
 const createProjectCards = () => {
   projectData.getProjects().then((projects) => {
+    console.log(projects);
     let tempString = '';
     for (let i = 0; i < projects.length; i += 1) {
       if (projects[i].available === true) {

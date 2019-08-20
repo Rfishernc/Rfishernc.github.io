@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import 'bootstrap';
-import bioPic from '../../../images/photos/croppedphoto.jpg';
-import solarIcon from '../../../images/solaricon3.jpg';
-import codingIcon from '../../../images/comp.png';
+import bioPic from '../../../images2/photos/croppedphoto.jpg';
+import solarIcon from '../../../images2/solaricon3.jpg';
+import codingIcon from '../../../images2/comp.png';
 import projectsComp from './projects';
 
 const hideForBio = () => {
@@ -30,7 +30,7 @@ const initialLoad = () => {
                       <div class="fullPage" id="bioPage">
                       <div class='bioDiv row'>
                         <div class='col-4'>
-                          <h3 id='bioTitle'>Rich Fisher - Jr. Jr. Software Developer</h3>
+                          <h3 id='bioTitle'>Rich Fisher - Junior Software Developer</h3>
                           <img src=${bioPic} id='bioImg'/>
                         </div>
                         <div class='col-8'>

@@ -1,10 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 
 body, html {
-  background-image: url('../images/photos/sld.PNG');
+  background-image: url('../images2/photos/sld.PNG');
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .mainContainer {
@@ -124,7 +124,7 @@ footer {
   display: flex;
   justify-content: center;
   background-color: burlywood;
-  width: 480px;
+  width: 600px;
   border: 1.5px solid white;
   border-radius: 3px;
   margin-left: auto;
@@ -237,7 +237,7 @@ footer {
 }
 
 #projectsPage {
-  position: fixed;
+  // position: fixed;
   left: 0;
   top: 0;
   display: flex;
@@ -251,6 +251,7 @@ footer {
 
 .projectCard {
   width: 960px;
+  margin-bottom: 60px;
 }
 
 .projectsTitle {
@@ -286,10 +287,9 @@ footer {
   justify-content: center;
 }
 
-.cardBody {
-  max-height: 500px;
-  overflow: auto;
-}
+// .cardBody {
+//   margin-bottom: 100px;
+// }
 
 #technologiesPage {
   position: fixed;

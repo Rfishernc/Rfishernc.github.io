@@ -131,6 +131,215 @@
         </div>
       </div>
 
+      <div class="modal" tabindex="-1" role="dialog" id='seatModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Visual Seating Map</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/portermoon-seats.PNG?alt=media&token=e2a54571-62df-4719-9705-6887f85fbca2' class='modalImg'>
+              <p class='modalPar'>Each passenger flight added has a corresponding set of seats added to the sql database, generated through a cartesian join.  The application then pulls these seats in when customers are purchasing to generate a visual map of the seats including which are are already purchased, which are first class, etc. using the data from the seats table along with the row length information stored with the flight.
+                The site then uses the number of rows and row lenght to scale the rocket image size to fit the particulars of the flight.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='sellerModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Seller Dashboard</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/portermoon-dashboard.PNG?alt=media&token=324f8503-d21f-42d5-bbe7-b549b254bc5e' class='modalImg'>
+              <p class='modalPar'>The seller dashboard pulls in the sellers flight tables from the sql server and joins each purchase to the relevant flight and each payment to the relevant order.  The seller can then view not only general statistics and purchase information, but select individual purchases to view the order and payment details of that purchase.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='calendarModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Flight Calendar</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/portermoon-caldenar.PNG?alt=media&token=2fde7487-27f5-4c72-9249-9706f70429c9' class='modalImg'>
+              <p class='modalPar'>The flight calendar utilizes the React Calendar library to allow a seller to view their flight schedule.  
+                Flights are pulled from the sql server and have their arrival and departure times converted to the React Calendar format, where they are inserted into their proper dates along with a link to the flight details through a callback function passed to each date.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='flightsModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Flight Listings</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/portermoon-seller.PNG?alt=media&token=0874abc3-cb63-4678-a8a3-74f567cdd7b4' class='modalImg'>
+              <p class='modalPar'>Flight listings are sortable along many channels, the custom multi-tier dropdown menu allows specifying flight type as well as destination, and even displays number of flights in menu along the route.
+                Within an airlines home page, flights can be sorted by route, using a combination of origin and destination, as well as departure dates.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='achievementsModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Achievement System</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/cardboard-achievements.PNG?alt=media&token=deacfeab-ded3-4464-9fbc-c9dcc6e64df3' class='modalImg'>
+              <p class='modalPar'></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='votingModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Voting System</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/cardboard-voting.PNG?alt=media&token=c0832d59-ede5-4026-bcab-47e4e6449404' class='modalImg'>
+              <p class='modalPar'></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='notificationsModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Automatic Notifications</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/cardboard-notifications.PNG?alt=media&token=359ff0b1-ab72-4f49-90fe-20faea76a5fa' class='modalImg'>
+              <p class='modalPar'></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='searchModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Custom Searching</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/cardboard-search.PNG?alt=media&token=7d716595-d864-4225-aa96-df5177428701' class='modalImg'>
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/cardboard-searchresult.PNG?alt=media&token=efa676cb-3040-48c5-a03d-7aa481cd7c79' class='modalImg'>
+              <p class='modalPar'></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='userSearchModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Filtered User Searching</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/gardenSearch.PNG?alt=media&token=47bc328f-d9fd-4116-a568-a55538dca8ff' class='modalImg'>
+              <p class='modalPar'></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='tradeModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Trading System</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/garden-tradeDetail.PNG?alt=media&token=c45f3126-3e9a-405c-822b-1caf8338a923' class='modalImg'>
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/garden-rating.PNG?alt=media&token=eee4d969-90d3-4082-94f0-54016f35d5c7' class='modalImg'>
+              <p class='modalPar'></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='plantPhotoModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">User Uploaded Photos</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/garden-plantphoto.PNG?alt=media&token=12bf2993-6f80-4a45-bc18-de2aac9cc6eb' class='modalImg'>
+              <p class='modalPar'></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id='addPlantModal'>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Auto-suggest Plant Additions</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/garde-addplant.PNG?alt=media&token=a49fde2d-9824-42f1-a005-9338255c30eb' class='modalImg'>
+              <p class='modalPar'></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="modal" tabindex="-1" role="dialog" id='solarModal'>
         <div class="modal-dialog solarContent" role="document">
           <div class="modal-content">
@@ -175,6 +384,7 @@
         <div class='footDiv'>
           <p class='footerLink'><i class="fas fa-envelope-square"></i> Rich.FisherNC@gmail.com</p>
           <a href='https://github.com/Rfishernc' target ='_blank' class='footerLink'><i class="fab fa-github"></i> GitHub</a>
+          <a href='https://www.linkedin.com/in/rich-fisher-2a496719/' target ='_blank' class='footerLink'><i class="fab fa-linkedin"></i> Linkedin</a>
           <p class='footerLink footerRight'><i class="fas fa-phone"></i> 615-543-1664</p>
         </div>
       </footer>

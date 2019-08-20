@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import techData from '../data/techData';
-import screen1 from '../../../images/photos/Bebop_Drone_2016-05-18T185813+0000_D15CA0.jpg';
+import screen1 from '../../../images2/photos/Bebop_Drone_2016-05-18T185813+0000_D15CA0.jpg';
 
 const devBuilder = () => new Promise((resolve) => {
   techData.getDev().then((techs) => {
