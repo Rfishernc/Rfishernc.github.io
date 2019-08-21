@@ -5,7 +5,6 @@ const getResume = () => new Promise((resolve, reject) => {
     .get('https://personal-site-55542.firebaseio.com/resume.json')
     .then((data) => {
       const resumeUrl = data.data.url;
-      console.log(resumeUrl);
       resolve(resumeUrl);
     })
     .catch((err) => {
