@@ -15152,6 +15152,7 @@ const clickedCard = () => {
 
 const createProjectCards = () => {
   __WEBPACK_IMPORTED_MODULE_2__data_projectsData__["a" /* default */].getProjects().then(projects => {
+    console.log(projects);
     let tempString = '';
     for (let i = 0; i < projects.length; i += 1) {
       if (projects[i].available === true) {
@@ -15672,12 +15673,12 @@ module.exports = Cancel;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bootstrap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__images_photos_croppedphoto_jpg__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__images_photos_croppedphoto_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__images_photos_croppedphoto_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images_solaricon3_jpg__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images_solaricon3_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__images_solaricon3_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__images_comp_png__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__images_comp_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__images_comp_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__images2_photos_croppedphoto_jpg__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__images2_photos_croppedphoto_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__images2_photos_croppedphoto_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images2_solaricon3_jpg__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images2_solaricon3_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__images2_solaricon3_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__images2_comp_png__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__images2_comp_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__images2_comp_png__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__projects__ = __webpack_require__(5);
 
 
@@ -15711,8 +15712,8 @@ const initialLoad = () => {
                       <div class="fullPage" id="bioPage">
                       <div class='bioDiv row'>
                         <div class='col-4'>
-                          <h3 id='bioTitle'>Rich Fisher - Jr. Jr. Software Developer</h3>
-                          <img src=${__WEBPACK_IMPORTED_MODULE_2__images_photos_croppedphoto_jpg___default.a} id='bioImg'/>
+                          <h3 id='bioTitle'>Rich Fisher - Junior Software Developer</h3>
+                          <img src=${__WEBPACK_IMPORTED_MODULE_2__images2_photos_croppedphoto_jpg___default.a} id='bioImg'/>
                         </div>
                         <div class='col-8'>
                           <p class='title'>About Me</p>
@@ -15721,8 +15722,8 @@ const initialLoad = () => {
                         </div>
                       </div>
                       <div id='bioButtonsDiv'>
-                        <button class='btn btn-outline-dark bioBut' id='bioSolarBut' data-toggle='modal' data-target='#solarModal'><img src=${__WEBPACK_IMPORTED_MODULE_3__images_solaricon3_jpg___default.a} class='buttonIcon'/>What I used to do</button>
-                        <button class='btn btn-outline-dark bioBut' id='bioCodingBut'><img src=${__WEBPACK_IMPORTED_MODULE_4__images_comp_png___default.a} class='buttonIcon'/>What I do now</button>
+                        <button class='btn btn-outline-dark bioBut' id='bioSolarBut' data-toggle='modal' data-target='#solarModal'><img src=${__WEBPACK_IMPORTED_MODULE_3__images2_solaricon3_jpg___default.a} class='buttonIcon'/>What I used to do</button>
+                        <button class='btn btn-outline-dark bioBut' id='bioCodingBut'><img src=${__WEBPACK_IMPORTED_MODULE_4__images2_comp_png___default.a} class='buttonIcon'/>What I do now</button>
                       </div>
                     </div>`;
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#bioPage').html(tempString);
@@ -15737,7 +15738,7 @@ const bioBuilder = () => {
                       <div class='bioDiv row'>
                         <div class='col-4'>
                           <h3 id='bioTitle'>Rich Fisher - Jr. Jr. Software Developer</h3>
-                          <img src=${__WEBPACK_IMPORTED_MODULE_2__images_photos_croppedphoto_jpg___default.a} id='bioImg'/>
+                          <img src=${__WEBPACK_IMPORTED_MODULE_2__images2_photos_croppedphoto_jpg___default.a} id='bioImg'/>
                         </div>
                         <div class='col-8'>
                           <p class='title'>About Me</p>
@@ -15746,8 +15747,8 @@ const bioBuilder = () => {
                         </div>
                       </div>
                       <div id='bioButtonsDiv'>
-                        <button class='btn btn-outline-dark bioBut' id='bioSolarBut' data-toggle='modal' data-target='#solarModal'><img src=${__WEBPACK_IMPORTED_MODULE_3__images_solaricon3_jpg___default.a} class='buttonIcon'/>What I used to do</button>
-                        <button class='btn btn-outline-dark bioBut' id='bioCodingBut'><img src=${__WEBPACK_IMPORTED_MODULE_4__images_comp_png___default.a} class='buttonIcon'/>What I do now</button>
+                        <button class='btn btn-outline-dark bioBut' id='bioSolarBut' data-toggle='modal' data-target='#solarModal'><img src=${__WEBPACK_IMPORTED_MODULE_3__images2_solaricon3_jpg___default.a} class='buttonIcon'/>What I used to do</button>
+                        <button class='btn btn-outline-dark bioBut' id='bioCodingBut'><img src=${__WEBPACK_IMPORTED_MODULE_4__images2_comp_png___default.a} class='buttonIcon'/>What I do now</button>
                       </div>
                       </div>`;
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#bioPage').html(tempString);
@@ -18415,22 +18416,22 @@ module.exports = g;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__resume__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__svgComp__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__images_sunBio_png__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__images_sunBio_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__images_sunBio_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__images_sunProjects_png__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__images_sunProjects_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__images_sunProjects_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__images_sunTech_png__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__images_sunTech_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__images_sunTech_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__images_sunResume_png__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__images_sunResume_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__images_sunResume_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__images_sunBioHot_png__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__images_sunBioHot_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__images_sunBioHot_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__images_sunProjectsHot_png__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__images_sunProjectsHot_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__images_sunProjectsHot_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__images_sunTechHot_png__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__images_sunTechHot_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__images_sunTechHot_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__images_sunResumeHot_png__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__images_sunResumeHot_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__images_sunResumeHot_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__images2_sunBio_png__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__images2_sunBio_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__images2_sunBio_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__images2_sunProjects_png__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__images2_sunProjects_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__images2_sunProjects_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__images2_sunTech_png__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__images2_sunTech_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__images2_sunTech_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__images2_sunResume_png__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__images2_sunResume_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__images2_sunResume_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__images2_sunBioHot_png__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__images2_sunBioHot_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__images2_sunBioHot_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__images2_sunProjectsHot_png__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__images2_sunProjectsHot_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__images2_sunProjectsHot_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__images2_sunTechHot_png__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__images2_sunTechHot_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__images2_sunTechHot_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__images2_sunResumeHot_png__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__images2_sunResumeHot_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__images2_sunResumeHot_png__);
 
 
 
@@ -18450,10 +18451,10 @@ module.exports = g;
 let posX;
 let posY;
 const sunMenu = {
-  sunProjects: __WEBPACK_IMPORTED_MODULE_8__images_sunProjects_png___default.a, sunTech: __WEBPACK_IMPORTED_MODULE_9__images_sunTech_png___default.a, sunBio: __WEBPACK_IMPORTED_MODULE_7__images_sunBio_png___default.a, sunResume: __WEBPACK_IMPORTED_MODULE_10__images_sunResume_png___default.a
+  sunProjects: __WEBPACK_IMPORTED_MODULE_8__images2_sunProjects_png___default.a, sunTech: __WEBPACK_IMPORTED_MODULE_9__images2_sunTech_png___default.a, sunBio: __WEBPACK_IMPORTED_MODULE_7__images2_sunBio_png___default.a, sunResume: __WEBPACK_IMPORTED_MODULE_10__images2_sunResume_png___default.a
 };
 const sunMenuHot = {
-  sunProjectsHot: __WEBPACK_IMPORTED_MODULE_12__images_sunProjectsHot_png___default.a, sunTechHot: __WEBPACK_IMPORTED_MODULE_13__images_sunTechHot_png___default.a, sunBioHot: __WEBPACK_IMPORTED_MODULE_11__images_sunBioHot_png___default.a, sunResumeHot: __WEBPACK_IMPORTED_MODULE_14__images_sunResumeHot_png___default.a
+  sunProjectsHot: __WEBPACK_IMPORTED_MODULE_12__images2_sunProjectsHot_png___default.a, sunTechHot: __WEBPACK_IMPORTED_MODULE_13__images2_sunTechHot_png___default.a, sunBioHot: __WEBPACK_IMPORTED_MODULE_11__images2_sunBioHot_png___default.a, sunResumeHot: __WEBPACK_IMPORTED_MODULE_14__images2_sunResumeHot_png___default.a
 };
 
 const clickedAndHeld = () => {
@@ -19422,8 +19423,8 @@ module.exports = function spread(callback) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_techData__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__images_photos_Bebop_Drone_2016_05_18T185813_0000_D15CA0_jpg__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__images_photos_Bebop_Drone_2016_05_18T185813_0000_D15CA0_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__images_photos_Bebop_Drone_2016_05_18T185813_0000_D15CA0_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__images2_photos_Bebop_Drone_2016_05_18T185813_0000_D15CA0_jpg__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__images2_photos_Bebop_Drone_2016_05_18T185813_0000_D15CA0_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__images2_photos_Bebop_Drone_2016_05_18T185813_0000_D15CA0_jpg__);
 
 
 
@@ -19450,7 +19451,7 @@ const devBuilder = () => new Promise(resolve => {
 const nondevBuilder = incString => {
   __WEBPACK_IMPORTED_MODULE_1__data_techData__["a" /* default */].getNondev().then(techs => {
     let tempString = incString;
-    tempString += `<div class="jumbotron col-5" id='nondevDiv' style='background-image: url(${__WEBPACK_IMPORTED_MODULE_2__images_photos_Bebop_Drone_2016_05_18T185813_0000_D15CA0_jpg___default.a})'>
+    tempString += `<div class="jumbotron col-5" id='nondevDiv' style='background-image: url(${__WEBPACK_IMPORTED_MODULE_2__images2_photos_Bebop_Drone_2016_05_18T185813_0000_D15CA0_jpg___default.a})'>
                         <h1 class="display-4">Nondevelopment Techs</h1>
                         <hr class="my-4">
                         <div id='techContainer'>`;
@@ -19621,7 +19622,6 @@ const resumeBuilder = () => {
 const getResume = () => new Promise((resolve, reject) => {
   __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('https://personal-site-55542.firebaseio.com/resume.json').then(data => {
     const resumeUrl = data.data.url;
-    console.log(resumeUrl);
     resolve(resumeUrl);
   }).catch(err => {
     reject(err);
