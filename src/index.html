@@ -230,7 +230,7 @@
             </div>
             <div class="modal-body">
               <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/cardboard-voting.PNG?alt=media&token=c0832d59-ede5-4026-bcab-47e4e6449404' class='modalImg'>
-              <p class='modalPar'></p>
+              <p class='modalPar'>New achievements can be proposed by players and are added to the voting pool.  Achievements in the voting pool have a 30 day active voting period, checked each day by a background process running through Hangfire.  At the start of each month, votes are tallied for each pending achievement not in active voting, and the top ten vote getters are automatically added to the site.  This is also controlled by another background process in Hangfire.</p>
             </div>
           </div>
         </div>
@@ -247,7 +247,7 @@
             </div>
             <div class="modal-body">
               <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/cardboard-notifications.PNG?alt=media&token=359ff0b1-ab72-4f49-90fe-20faea76a5fa' class='modalImg'>
-              <p class='modalPar'></p>
+              <p class='modalPar'>When a user's achievement submission is reviewed by a moderator, a notification is automatically generated for the user with the status of their achievement submitall and a reason for denial in the case that an achievement is not approved.  After a user views a notification, it is flagged as viewed in the database and will no longer be returned or displayed to the user.</p>
             </div>
           </div>
         </div>
@@ -265,7 +265,7 @@
             <div class="modal-body">
               <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/cardboard-search.PNG?alt=media&token=7d716595-d864-4225-aa96-df5177428701' class='modalImg'>
               <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/cardboard-searchresult.PNG?alt=media&token=efa676cb-3040-48c5-a03d-7aa481cd7c79' class='modalImg'>
-              <p class='modalPar'></p>
+              <p class='modalPar'>Cardboard achievements uses a custom self-made search functionality that searches items within each word for better search results.  Furthermore, top results are displayed in a popdown selection with tags and styling based on item type.  Users can hover over a search result for 2 seconds and a call is made to the database to retrieve and render a preview of that item.</p>
             </div>
           </div>
         </div>
@@ -282,7 +282,10 @@
             </div>
             <div class="modal-body">
               <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/gardenSearch.PNG?alt=media&token=47bc328f-d9fd-4116-a568-a55538dca8ff' class='modalImg'>
-              <p class='modalPar'></p>
+              <p class='modalPar'>Gardenshare's user search utilizes zipcodeAPI to filter results in a chosen radius around the user.
+                Additionaly, filters are available for ratings, name, and harvest dates.
+                Users can choose as many filters as they want, and can even add multiple filters for the same channel.
+                The filter component passes a reference to itself up to the main component when options are selected, adding or removing filter objects from an array held in state to be iterated over by the filtering function.</p>
             </div>
           </div>
         </div>
@@ -300,7 +303,9 @@
             <div class="modal-body">
               <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/garden-tradeDetail.PNG?alt=media&token=c45f3126-3e9a-405c-822b-1caf8338a923' class='modalImg'>
               <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/garden-rating.PNG?alt=media&token=eee4d969-90d3-4082-94f0-54016f35d5c7' class='modalImg'>
-              <p class='modalPar'></p>
+              <p class='modalPar'>The trade system allows users to suggest crop trades with other users.  The system prevents users from suggesting trades for products that they or the trade partner lack or have insufficient quantity.  
+                A built in messaging system is tied to each trade request, allowing for communication between the users as they work out the particulars of the trade.  When a trade is completed, each user's inventory is automatically updated to reflect the trade changes.
+                When closing a trade, each user has an opportunity to rate the product quality and reliability of their trade partner.  This uses a self-made star-rating selector and display.  The users ratings are aggregated and re-averaged after each rating.  </p>
             </div>
           </div>
         </div>
@@ -317,7 +322,8 @@
             </div>
             <div class="modal-body">
               <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/garden-plantphoto.PNG?alt=media&token=12bf2993-6f80-4a45-bc18-de2aac9cc6eb' class='modalImg'>
-              <p class='modalPar'></p>
+              <p class='modalPar'>Users can upload photos of their crops to a plant-specific container using firebase's storagebucket.  Other users can then view these photos when viewing a user's listing in the trading interface.
+                Because the storagebucket requires a relative file path to retrieve a download url for each photo, a reference to the pathname is created within the database upon each upload and used to retrieve the photo file through the firebase API.</p>
             </div>
           </div>
         </div>
@@ -334,7 +340,9 @@
             </div>
             <div class="modal-body">
               <img src='https://firebasestorage.googleapis.com/v0/b/personal-site-55542.appspot.com/o/garde-addplant.PNG?alt=media&token=a49fde2d-9824-42f1-a005-9338255c30eb' class='modalImg'>
-              <p class='modalPar'></p>
+              <p class='modalPar'>To insure consitentcy in search filtering and trading requests, plants added to a user's inventory must conform to a set listing of names.
+                To help user's select the correct plant listing, plant entry uses a self-made auto-suggest feature to create a matching list of plant names, each with a visual icon for that plant type.  
+                Selecting from this auto-suggest list will then fill the relevant input.</p>
             </div>
           </div>
         </div>

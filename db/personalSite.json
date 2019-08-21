@@ -130,10 +130,10 @@
       "url": "https://gardenshare-890ac.web.app", 
       "githubUrl": "https://github.com/Rfishernc/gardenshare",
       "components": {
-        "userSearchModal": "Under Construction",
-        "plantPhotoModal": "Under Construction",
-        "addPlantModal": "Under Construction",
-        "tradeModal": "Under Construction"
+        "userSearchModal": "Filtered User Search",
+        "plantPhotoModal": "User Uploaded Photos",
+        "addPlantModal": "Auto-suggest Additions",
+        "tradeModal": "Trading System"
       }
     },
     "project4": {
