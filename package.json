@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.6.3",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.2.1",
     "datatables.net": "^1.10.19",
     "es6-promise": "^4.2.5",
